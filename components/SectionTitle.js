@@ -29,7 +29,7 @@ class SectionTitle extends React.Component {
     title: PropTypes.node,
     subtitle: PropTypes.node,
     values: PropTypes.object,
-    action: PropTypes.object, // { label, href }
+    action: PropTypes.object,
   };
 
   render() {
@@ -37,29 +37,8 @@ class SectionTitle extends React.Component {
     const title = this.props.title;
     const subtitle = this.props.subtitle;
     return (
-      <Container textAlign="center" className="SectionTitle">
-        <style jsx>
-          {`
-            .SectionTitle {
-              margin-top: 4rem;
-              overflow: hidden;
-              text-align: center;
-              margin-bottom: 7.2rem;
-            }
-            .SectionTitle .title :global(.action) {
-              font-size: 1.4rem;
-            }
-            h1 {
-              margin: 0;
-              text-align: center;
-            }
-            .content {
-              padding: 0.8rem 0;
-            }
-          `}
-        </style>
-
-        <Container className="content">
+      <Container textAlign="center" overflow="hidden" marginBottom="0.5rem">
+        <Container padding="0.8rem 0">
           <Box mt={2} mb={3}>
             <Title>{title}</Title>
           </Box>
